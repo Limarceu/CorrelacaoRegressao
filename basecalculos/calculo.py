@@ -3,8 +3,7 @@
     ou qualquer extensão de arquivos que suportem datasets lidos
     pelo pandas.'''
 
-
-class Calculus():
+class Calculus:
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -15,16 +14,15 @@ class Calculus():
             somador_xy = self.x[n]*self.y[n] + somador_xy
         return somador_xy
 
-    @staticmethod
-    def soma(args):
+    def soma(self, args):
         somador = 0
         for n in args:
             somador += n
         return somador
 
-    @staticmethod
-    def soma_quadrado(args):
+    def soma_quadrado(self, args):
         soma_quad = 0
         for n in args:
             soma_quad += n**2
         return soma_quad
+
