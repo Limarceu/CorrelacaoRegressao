@@ -1,8 +1,8 @@
 import pandas as pd
 from pandas import DataFrame as dt
-from estatistica import Correlacao
+from Correlacao import Correlacao
 
-leitura = pd.read_excel("C:\\Users\\marcelodiana\\Downloads\\cereal.xlsx")
+leitura = pd.read_excel("datasets\\cereal.xlsx")
 #print(leitura)
 
 fat = leitura['fat'].values.tolist()
@@ -11,15 +11,15 @@ sodium = leitura['sodium'].values.tolist()
 potass = leitura['potass'].values.tolist()
 protein = leitura['protein'].values.tolist()
 
-def rota_calculo(x, y):
-    if len(x) == len(y):
-        instancia = Correlacao()
-        return round(instancia.r(x, y),4)
-    else:
-        pass
+#instancia1 = Correlacao(x,y).correlacao_r()
+#print(instancia1)
+c1 = Correlacao(fat, calories)
+c2 = Correlacao(fat, sodium)
+c3 = Correlacao(sodium, potass)
+c4 = Correlacao(calories, protein)
 
-print('Correlação(fat, calories) = {}'.format(rota_calculo(fat, calories)))
-print('Correlação(fat, sodium) = {}'.format(rota_calculo(fat, sodium)))
-print('Correlação(sodium, potass) = {}'.format(rota_calculo(sodium, potass)))
-print('Correlação(calories, protein) = {}'.format(rota_calculo(calories, protein)))
+print('Correlação(fat, calories) = {}'.format(c1.correlacao_r()))
+print('Correlação(fat, sodium) = {}'.format(c2.correlacao_r()))
+print('Correlação(sodium, potass) = {}'.format(c3.correlacao_r()))
+print('Correlação(calories, protein) = {}'.format(c4.correlacao_r()))
 

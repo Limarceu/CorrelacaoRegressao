@@ -4,15 +4,15 @@
     pelo pandas.
 '''
 
-class Calculus:
+class Calculus():
     def __init__(self, x, y):
         self.x = x
         self.y = y
     
     def soma_xy(self):
         somador_xy = 0
-        for n, xi in enumerate(x):
-            somador_xy = x[n]*y[n] + somador_xy
+        for n, xi in enumerate(self.x):
+            somador_xy = self.x[n]*self.y[n] + somador_xy
         return somador_xy
     @staticmethod
     def soma(args):
@@ -27,14 +27,3 @@ class Calculus:
         for n in args:
             soma_quad += n**2
         return soma_quad
-    
-    
-'''
-if len(x) == len(y):
-    a = Correlacao()
-    print(a.r(x, y))
-    print(round(a.r(x,y),3))
-else:
-    pass
-
-'''
