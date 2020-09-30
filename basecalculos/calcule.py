@@ -6,6 +6,7 @@ import pandas as pd
 #path caminho de entrada de arquivo para leitura de dataset
 caminho = 'datasets\\'
 leitura = pd.read_excel(caminho + 'sampleData.xlsx')
+#leitura = pd.read_csv(caminho + 'sampleData.csv')   #para arquivos .csv
 '''Por opção para visualizar as colunas do dataset escolhido, print(leitura.head(2))'''
 
 '''convertendo uma coluna em uma lista'''
