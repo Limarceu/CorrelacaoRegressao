@@ -1,6 +1,6 @@
 import pandas as pd
 from pandas import DataFrame as dt
-from Correlacao import Correlacao
+from basecalculos.correlacao import Correlacao
 
 leitura = pd.read_excel("datasets\\cereal.xlsx")
 #print(leitura)

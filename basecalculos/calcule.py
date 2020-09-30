@@ -5,12 +5,12 @@ import pandas as pd
 
 #path caminho de entrada de arquivo para leitura de dataset
 caminho = 'datasets\\'
-leitura = pd.read_excel(caminho + 'carbono.xlsx')
+leitura = pd.read_excel(caminho + 'sampleData.xlsx')
 '''Por opção para visualizar as colunas do dataset escolhido, print(leitura.head(2))'''
 
 '''convertendo uma coluna em uma lista'''
-coluna_1 = leitura['PIB'].values.tolist()
-coluna_2 = leitura['CO2'].values.tolist()
+coluna_1 = leitura['Text_Messages_Sent_Yesterday'].values.tolist()
+coluna_2 = leitura['Text_Messages_Received_Yesterday'].values.tolist()
 
 '''Correlação'''
 correlacao_observada = Correlacao(coluna_1, coluna_2)
@@ -29,5 +29,15 @@ print('Interceptação_b = {}'.format(round(interceptacao_b, 4)))
 
 '''Mostra a equação da reta'''
 print('==================')
-print('y = {}*x + ({})'.format(inclinacao, interceptacao_b))
+print('y = {}*x + ({})'.format(round(inclinacao,3), round(interceptacao_b,3)))
 print('==================')
+
+xm, ym = 11.5, 320.5
+sx , sy = 1.1, 18.2
+r = 0.92
+m = r*sy/sx
+b = ym - m*xm
+x = 16
+print('y = {}x + ({})'.format(round(m, 2), round(b, 2)))
+y = m*x +b
+print(round(y,2))
