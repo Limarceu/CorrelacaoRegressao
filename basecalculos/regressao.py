@@ -1,7 +1,7 @@
 '''Caluculo do Coeficiente angular a partir de multiplos pontos bidimensionais'''
 '''Para calcular a inclinação da reta m receberemos datasets externos'''
 
-from calculo import Calculus
+from basecalculos.calculo import Calculus
 
 
 class Inclinacao(Calculus):

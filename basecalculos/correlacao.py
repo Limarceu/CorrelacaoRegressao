@@ -1,4 +1,4 @@
-from calculo import Calculus
+from basecalculos.calculo import Calculus
 import math
 
 

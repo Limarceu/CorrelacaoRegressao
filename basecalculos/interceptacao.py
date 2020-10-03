@@ -1,5 +1,5 @@
-from calculo import Calculus
-from regressao import Inclinacao
+from basecalculos.calculo import Calculus
+from basecalculos.regressao import Inclinacao
 
 class Interceptacao(Inclinacao):
     def __init__(self, x, y):

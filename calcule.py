@@ -1,6 +1,6 @@
-from correlacao import Correlacao
-from regressao import Inclinacao
-from interceptacao import Interceptacao
+from basecalculos.correlacao import Correlacao
+from basecalculos.regressao import Inclinacao
+from basecalculos.interceptacao import Interceptacao
 import pandas as pd
 
 #path caminho de entrada de arquivo para leitura de dataset
